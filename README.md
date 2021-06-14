@@ -1,6 +1,6 @@
 # Jawn.fr
 
-Personal Site. 
+Personal Site. I forked this from doge-nft
 
 This gallery uses `@zoralabs/nft-components` to render custom auctions. Fork this to create your own curated auction house or galleries of Zora media or ERC721s.
 
