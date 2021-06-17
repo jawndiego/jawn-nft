@@ -55,7 +55,7 @@ function Lights() {
   )
 }
 
-export default function App() {
+export function FrontArt() {
   const controls = useRef()
   return (
     <div className="front-page_wrapper">
@@ -86,3 +86,4 @@ export default function App() {
   )
 }
 
+export default FrontArt

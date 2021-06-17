@@ -2,6 +2,7 @@ import Head from '../components/head'
 import DogeCards from '../components/doge-cards'
 import DogeSidebar from '../components/doge-sidebar'
 import ZoraKymCard from '../components/zora-kym-card'
+import FrontArt from '../components/frontart'
 
 export default function Index({ data }) {
   return (
