@@ -9,8 +9,9 @@ import copy from '../lib/about-copy'
 const DogeHistory = () => {
   return (
     <>
+  
       <Head
-        title="About Doge"
+        title="Collections"
         description="Hardly a day goes by online that you won’t find yourself encountering “Doge” in some form or fashion. Whether it be a simple meme, discussion about the Dogecoin cryptocurrency or even just a picture of a Shiba Inu, the legendary Doge is arguably the most famous meme of all time."
       />
       <GoHome />

@@ -1,7 +1,9 @@
 import Head from '../components/head'
-import DogeCards from '../components/doge-cards'
 import DogeSidebar from '../components/doge-sidebar'
-import ZoraKymCard from '../components/zora-kym-card'
+import FrontArt from '../components/frontart'
+
+
+
 
 export default function Index({ data }) {
   return (
@@ -9,13 +11,23 @@ export default function Index({ data }) {
       <Head
         title="Hi."
       />
+     
       <DogeSidebar/>
       <section className="doge-home_wrapper">
         <div className="doge-home_border" />
+        
         <nav className="doge-home_nav-wrapper">
-          <DogeCards/>
+
+        <FrontArt />  
+
         </nav>
+        <div className={`doge-footer_wrapper`}>
+        <p><span className="blink">_ </span><a target="_blank" href="https://zora.co/jawn">Zora </a></p>
+          <p><span className="blink">_ </span><a target="_blank" href="https://twitter.com/jawnciego">Twitter</a></p>
+          <p><span className="blink">_ </span><a target="_blank" href="https://instagram.com/jawndiego">IG </a></p>
+        </div>
       </section>
+  
       
     </>
   )

@@ -8,7 +8,7 @@ const GoHome = () => {
       <Link href="/">
         <a className="go-home_link">
           <DogeHead/>
-          <span className="go-home_cta lozenge-button">☮</span>
+          <span className="go-home_cta lozenge-button">🏠</span>
         </a>
       </Link>
 
