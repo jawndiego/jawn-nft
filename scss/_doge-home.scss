@@ -4,7 +4,7 @@
   &_border {
     width: 100%;
     height: auto;
-    position: relative;
+    position: auto;
     z-index: 1;
     animation-fill-mode: both;
   }
@@ -45,6 +45,7 @@
   .doge-home {
     &_border {
       display: none;
+      position: center;
     }
   }
 }

@@ -21,17 +21,16 @@ const DogeSidebar = () => {
       <div className="doge-sidebar_inner">
         <DogeHead />
         <div className="doge-sidebar_title">
-
-
-          
-        
-        </div>
-          
-      
-          <p><span className="blink">_ </span><a target="_blank" href="https://zora.co/jawn">Zora </a></p>
-          <p><span className="blink">_ </span><a target="_blank" href="https://twitter.com/jawnciego">Twitter</a></p>
-          <p><span className="blink">_ </span><a target="_blank" href="https://instagram.com/jawndiego">IG </a></p>
- 
+        <Link href={'/auction'}>
+            <a className="lozenge-button doge-sidebar_history-button">auction</a>
+          </Link>
+        <Link href={'/archives'}>
+            <a className="lozenge-button doge-sidebar_history-button">archive</a>
+          </Link>
+          {/* <Link href={'/doge-history'}> */}
+            {/* <a className="lozenge-button doge-sidebar_history-button">collection</a> */}
+          {/* </Link> */}
+         </div>
         
       </div>
     </div>
