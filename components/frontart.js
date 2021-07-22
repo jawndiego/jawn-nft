@@ -3,6 +3,8 @@ import React, {  Suspense, useState, useRef } from 'react'
 import { Canvas, useFrame, createPortal } from '@react-three/fiber'
 import { useGLTF, Stage, Sky, Stars, useFBO, OrbitControls, rotation, PerspectiveCamera, CameraShake, ContactShadows } from '@react-three/drei'
 import {  Beer, Concha, Angel, Plant } from './models'
+import {ObjectListLeft, ObjectListRight, ObjectListCenter, ObjectListMirror} from './models'
+
 
 
 
@@ -30,7 +32,7 @@ function MagicMirror({ children, ...props }) {
 
    
       <mesh {...props}>
-        <planeGeometry args={[4, 8]} />
+        <planeGeometry args={[5, 10]} position={[0,10,10]} />
         {/* The "mirror" is just a boring plane, but it receives the buffer texture */}
         <meshBasicMaterial map={fbo.texture} />
       </mesh>
@@ -48,9 +50,10 @@ function Lights() {
   return (
     <>
       <color attach="background" args={['#f0f0f0']} />
-      <ambientLight intensity={1} />
-      <pointLight intensity={4} position={[200, 30, 100]} color="red" />
-      <pointLight intensity={1.2} position={[30, 10, 30]} color="blue" />
+      <ambientLight intensity={3} color="red" />
+      <pointLight intensity={60} position={[2, 30, 10]} color="red" />
+      <pointLight intensity={6} position={[3, 1, 10]} color="blue" />
+      <pointLight intensity={3} position={[3, 10, 30]} color="red" />
     </>
   )
 }
@@ -61,21 +64,16 @@ export function FrontArt() {
     <div className="front-page_wrapper">
     <Canvas dpr={(1,2)} camera={{ position: [0, 4, 8], fov: 50 }} gl={{ alpha: false }}>
       <Lights />
-      <Stars radius={100} depth={50} count={5000} factor={4} saturation={0} fade />
       <Suspense fallback={null}>
         <Stage controls={controls}>
           <MagicMirror position={[-13, 3.5, 0]} rotation={[0, 0, 0]}>
             <Lights />
             <Sky sunPosition={[10000, 10, 10000]} />
-            <Angel fixedposition={[-.1, 59.9, 300]} scale={60} />
+            <ObjectListMirror />
           </MagicMirror>
-          <Concha position={[-8, .65, 2]} rotation={[.50, 0, 0]} />
-          <Beer scale={3.6} position={[-10.5, 0, 3]} rotation={[0, 1.30, 0]} />
-         
-         
-          
-         
-          <Plant position={[-12.5, 0, 3]} />
+          <ObjectListRight />
+          <ObjectListLeft />
+          <ObjectListCenter />
           
          
         </Stage>
