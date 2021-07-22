@@ -253,6 +253,15 @@ const objects = [
   
   },
   {
+    name: 'obj0',
+    pathname: 'obj0',
+    material: '_Gun_GWdefault',
+    position: [-15, .8, 3],
+    scale: [.6, .6, .6],
+    rotation: [0, 2.4, 1.75]
+  
+  },
+  {
     name: 'pitaya',
     pathname: 'Cactus_Fig_04',
     material: 'Cactus_Fig_04_Material',
